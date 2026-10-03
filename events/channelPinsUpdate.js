@@ -1,0 +1,2 @@
+const { sendLog } = require('../utils/logger');
+module.exports = { name: 'channelPinsUpdate', execute(channel) { if (!channel.guild) return; sendLog(channel.guild, 'pin_update_channel_id', '### Channel Pins Updated', `**Channel:** <#${channel.id}>\nPinned messages changed.`); }};

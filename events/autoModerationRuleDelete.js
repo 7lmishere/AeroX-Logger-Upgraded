@@ -1,0 +1,2 @@
+const { sendLog } = require('../utils/logger');
+module.exports = { name: 'autoModerationRuleDelete', execute(rule) { sendLog(rule.guild, 'automod_rule_delete_channel_id', '### AutoMod Rule Deleted', `**Name:** ${rule.name}\n**ID:** \`${rule.id}\``); }};

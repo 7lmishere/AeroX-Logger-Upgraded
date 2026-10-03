@@ -1,0 +1,2 @@
+const { sendLog } = require('../utils/logger');
+module.exports = { name: 'autoModerationRuleCreate', execute(rule) { sendLog(rule.guild, 'automod_rule_create_channel_id', '### AutoMod Rule Created', `**Name:** ${rule.name}\n**ID:** \`${rule.id}\`\n**Enabled:** ${rule.enabled}`); }};

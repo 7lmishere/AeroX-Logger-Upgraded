@@ -1,0 +1,2 @@
+const { sendLog } = require('../utils/logger');
+module.exports = { name: 'messageReactionRemoveAll', execute(message) { if (!message.guild) return; sendLog(message.guild, 'reaction_clear_channel_id', '### Reactions Cleared', `**Channel:** <#${message.channelId}>\n**Message:** ${message.id}`); }};

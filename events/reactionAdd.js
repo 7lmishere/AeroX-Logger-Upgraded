@@ -1,0 +1,2 @@
+const { sendLog } = require('../utils/logger');
+module.exports = { name: 'messageReactionAdd', execute(reaction, user) { if (user.bot || !reaction.message.guild) return; sendLog(reaction.message.guild, 'reaction_add_channel_id', '### Reaction Added', `**User:** <@${user.id}>\n**Emoji:** ${reaction.emoji}\n**Channel:** <#${reaction.message.channelId}>\n**Message:** [Jump](https://discord.com/channels/${reaction.message.guild.id}/${reaction.message.channelId}/${reaction.message.id})`); }};
